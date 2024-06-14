@@ -2381,8 +2381,8 @@ if (localStorage.getItem("blogbg") != undefined) {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/default-bg.jpg);
     --darkmode-bg:url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/darkmode-bg.webp);
-    --mobileday-bg: url(https://gd-hbimg.huaban.com/75dbb3fb9e29c42780b785f87515421a0cce521350ca24-velA11);
-    --mobilenight-bg: url(https://gd-hbimg.huaban.com/75dbb3fb9e29c42780b785f87515421a0cce521350ca24-velA11);
+    --mobileday-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/mobileday-bg.jpg);
+    --mobilenight-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/mobilenight-bg.jpg);
   }`;
 }
 
