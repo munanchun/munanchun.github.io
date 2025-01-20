@@ -4,7 +4,7 @@ $.ajax({
   type: 'get',
   url: 'https://apis.map.qq.com/ws/location/v1/ip',
   data: {
-    key: '2VEBZ-5P4W7-DOIX5-HPEBQ-NHXAJ-MCBO3',  // 这里要写你的KEY!!!
+    key: 'LA4BZ-WTKKC-B322I-AP54O-THHCT-FZBVF',  // 这里要写你的KEY!!!
     output: 'jsonp',
   },
   dataType: 'jsonp',
