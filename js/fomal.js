@@ -874,12 +874,12 @@ function createtime1() {
 
   var ascll = [
     `欢迎来到`,
-    `慕楠椿の小家!`,
+    `郭紫涵の小家!`,
     `山水一程，三生有幸✨`,
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2023 By munanchun",
+    "©2025 By munanchun",
   ];
 
   setTimeout(
