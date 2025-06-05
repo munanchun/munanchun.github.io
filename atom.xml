@@ -35,9 +35,9 @@
     
     <category term="js" scheme="https://munanchun.com/tags/js/"/>
     
-    <category term="垃圾回收" scheme="https://munanchun.com/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
-    
     <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="垃圾回收" scheme="https://munanchun.com/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
     
   </entry>
   
@@ -154,11 +154,11 @@
     <category term="前端" scheme="https://munanchun.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="websocket" scheme="https://munanchun.com/tags/websocket/"/>
     
     <category term="vue3" scheme="https://munanchun.com/tags/vue3/"/>
+    
+    <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
