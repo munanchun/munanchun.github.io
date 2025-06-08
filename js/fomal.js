@@ -72,7 +72,7 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | 你好可爱")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | 慕楠椿")[0];
 }
 
 function scrollToTop() {
@@ -874,7 +874,7 @@ function createtime1() {
 
   var ascll = [
     `欢迎来到`,
-    `你好可爱の小家!`,
+    `慕楠椿の小家!`,
     `山水一程，三生有幸✨`,
     "小站已经苟活",
     dnum,
@@ -997,8 +997,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| 你好可爱") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('你好可爱的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| 慕楠椿") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('慕楠椿的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
