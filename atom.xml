@@ -35,9 +35,9 @@
     
     <category term="js" scheme="https://munanchun.com/tags/js/"/>
     
-    <category term="垃圾回收" scheme="https://munanchun.com/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
-    
     <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="垃圾回收" scheme="https://munanchun.com/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
     
   </entry>
   
@@ -275,11 +275,11 @@
     <category term="前端" scheme="https://munanchun.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
+    <category term="css" scheme="https://munanchun.com/tags/css/"/>
+    
     <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="浏览器" scheme="https://munanchun.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-    <category term="css" scheme="https://munanchun.com/tags/css/"/>
     
   </entry>
   
@@ -327,9 +327,9 @@
     <category term="前端" scheme="https://munanchun.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="css" scheme="https://munanchun.com/tags/css/"/>
+    
+    <category term="前端" scheme="https://munanchun.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -375,9 +375,9 @@
     
     <category term="js" scheme="https://munanchun.com/tags/js/"/>
     
-    <category term="vue" scheme="https://munanchun.com/tags/vue/"/>
-    
     <category term="表单校验" scheme="https://munanchun.com/tags/%E8%A1%A8%E5%8D%95%E6%A0%A1%E9%AA%8C/"/>
+    
+    <category term="vue" scheme="https://munanchun.com/tags/vue/"/>
     
   </entry>
   

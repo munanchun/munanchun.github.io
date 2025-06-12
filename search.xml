@@ -22,9 +22,9 @@
             
             <tag> js </tag>
             
-            <tag> 垃圾回收 </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> 垃圾回收 </tag>
             
         </tags>
       
@@ -302,11 +302,11 @@
       
         <tags>
             
+            <tag> css </tag>
+            
             <tag> 前端 </tag>
             
             <tag> 浏览器 </tag>
-            
-            <tag> css </tag>
             
         </tags>
       
@@ -362,9 +362,9 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> css </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -418,9 +418,9 @@
             
             <tag> js </tag>
             
-            <tag> vue </tag>
-            
             <tag> 表单校验 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
