@@ -915,31 +915,6 @@
     
     
     <entry>
-      <title>微信小程序一全</title>
-      <link href="/posts/1ecd2ce8.html"/>
-      <url>/posts/1ecd2ce8.html</url>
-      
-        <content type="html"><![CDATA[<h1>微信小程序</h1><p>【微信官方公众平台】官网地址：<a href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/</a></p><h2 id="二">二</h2><p>基于微信生态圈的程序</p><ol><li>微信小程序与普通网页开发的区别</li></ol><p>1-1 运行环境的不同</p><p>​ 网页 ： 基于浏览器</p><p>​             微信小程序 ： 微信</p><p>1-2  API 不同</p><p>​            网页： 基于DOM 对象，BOM 的API</p><p>​            微信小程序：  自带的地理定位、支付 、 扫码</p><p>1-3 开发环境的不同</p><p>​           网页 ： 浏览器  +   代码编辑器</p><p>​           微信小程序 ：  1.申请小程序的开发账号</p><p>​                                     2.安装微信开发者工具</p><p>​                                     3.创建和配置小程序项目</p><p>小程序的官方接口：</p><p><img src="D:.Project_CJYX_%E8%AF%BE%E7%A8%8B%5C50-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5%5C02-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%5C22%E8%BD%AF%E4%BB%B6%E4%B8%80%E4%BA%8C%5C%E7%AC%AC15%E5%91%A8%5Clesson02%5C%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%8E%A5%E5%8F%A3.png" alt="微信小程序二维码接口"></p><p>【微信官方公众平台】 ： 官网地址 ： <a href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/</a></p><ol><li>填写账号信息</li><li>邮箱激活</li><li>连接激活</li></ol><p>​    主体    【个人】   区分 【企业】  -       【个人】  – 不支持微信支付、微信认证、高级接口</p><h2 id="三">三</h2><ol><li><p>获取小程序的APPID</p></li><li><p>安装开发者工具</p></li></ol><p>下载地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p><p>2-1 快速构建</p><p>2-2 代码查看编辑</p><p>2-3 代码调试与发布</p><h2 id="四">四</h2><h4 id="一-项目结构">一.项目结构</h4><ol><li><p>pages: 用来存放所有小程序的页面</p></li><li><p>utils: 用来存放工具性质的模块  （formattime）</p></li><li><p>app.js : 小程序项目入口文件</p></li><li><p>app.json : 全局配置文件</p></li><li><p>app.wxss: 全局样式文件</p></li><li><p>project.config.json: 项目配置文件</p></li><li><p>sitemap.json : 用来配置小程序是否被其它小程序索引</p></li></ol><h4 id="二、小程序组成部分">二、小程序组成部分</h4><p>单独文件夹存放、建议全部放在【page】文件夹下面</p><p>4部分组成：</p><ol><li>js脚本 : 存放数据、事件处理函数</li><li>json :  页面配置文件</li><li>.wxml : 页面排版</li><li>wxss : 页面样式文件</li></ol><h4 id="三、JSON-配置文件的作用">三、JSON 配置文件的作用</h4><p>所有的小程序都是以这种配置文件形式出现，通过这种JSON格式给小程序进行不同级别的配置</p><p>4种</p><p>app.json ,   project.config.json  ,sitemap.json</p><p>每个页面自己的.json 配置文件</p><p>app.json  ，全局变量，包括所有小程序页面路径、窗口外观、界面表现、底部tab等</p><ol><li><p>pages : 当前小程序所有页面路径</p></li><li><p>window:  定义所有的背景色、文字颜色等</p></li><li><p>style ： 样式版本</p></li><li><p>sitemapLocation ： 指明 sitemap.json 路径</p></li></ol><p>project.config.json</p><ol><li><p>settting : 保存编译相关的配置</p></li><li><p>appid： 更新</p></li></ol><p>sitemap.json</p><p>通过防爬虫机制</p><p>页面.json</p><p>本生支持的配置文件</p><h2 id="七">七</h2><h4 id="一，新增小程序页面">一，新增小程序页面</h4><p>只需要在app.json 下面  — pages ： 新增页面的路径，开发工具会根据路径自动生成相应的文件夹</p><h4 id="二、自定义首页">二、自定义首页</h4><p>调整app.json   pages  属性数组的页面路径顺序即可，首页默认为第一加载的路径，编译后进行渲染</p><h4 id="三、什么是WXML">三、什么是WXML</h4><p>weixin  Markup  language 一套自定义的微信标签，用来构建小程序页面的结构</p><p>WXML 和 HTML 区别</p><p>WXML</p><ol><li>标签名不同</li></ol><p>​HTML   (div  ，  span  ， img  , a)</p><p>​     WXML    (view , text ,  image , navigator )</p><ol start="2"><li>属性节点的不同</li></ol><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&lt;a href<span class="operator">=</span><span class="string">&quot;#&quot;</span> &gt;。。。</span><br><span class="line"></span><br><span class="line">​&lt;navigator  url<span class="operator">=</span><span class="string">&quot;/pages/index/index&quot;</span> &gt;</span><br></pre></td></tr></table></figure><ol start="3"><li>提供了类似VUE 中的模版语法</li></ol><p>​3-1 数据绑定</p><p>​            3-2  列表渲染</p><p>​            3-3 条件渲染</p><p>WXSS 微信小程序自带的样式语言</p><p>WXSS 与CSS 的区别</p><ol><li><p>新增了rpx 尺寸单位</p><p>​CSS 需要手动进行像素单位换算   rem</p><p>​        WSXX  不同屏幕小程序会自动进行换算</p></li><li><p>提供全局样式和局部样式</p></li><li><p>WXSS 里面的选择器</p></li></ol><p>​      只针对特别的选择器</p><p>​     .class   和  id</p><p>​    element 元素</p><p>​    :: after   和  ::before 伪类选择器</p><p>小程序中js 文件的分类</p><p>1-1 app.js</p><p>​整个入口文件，通过调用App函数来启动整个小程序</p><p>1-2 页面的.js 文件</p><p>​页面入口文件，通过Page函数来创建运行页面</p><p>1-3  普通的.js 文件</p><p>​就是普通的功能模块的文件，封装公共的函数或者属性供页面来调用</p><h3 id="六、宿主环境-（就近原则）">六、宿主环境 （就近原则）</h3><p>每一个程序运行的时候，需要依赖一个环境</p><p>没有宿主环境就跑步起来</p><p>微信小程序必须依赖微信</p><p>比H5多的功能</p><p>微信扫码、微信的支付、微信登录、地理定位</p><p>通信的主题：</p><ol><li>渲染层：</li></ol><p>​WXML 和 WXSS 就是我们的渲染层</p><ol start="2"><li>逻辑层：</li></ol><p>​js 脚本 工作在逻辑层的</p><h3 id="七、通信模型">七、通信模型</h3><p>与第三方交互的模式</p><h3 id="八、小程序启动的过程">八、小程序启动的过程</h3><ol><li><p>下载对应的小程序包</p></li><li><p>通过app.json全局配置文件解析项目</p></li><li><p>执行我们全局变量app.js 入口文件，调用APP（）创建小程序的实例</p></li><li><p>渲染小程序的首页</p></li><li><p>页面渲染完成</p></li></ol><h2 id="八">八</h2><h3 id="一、小程序组件的分类">一、小程序组件的分类</h3><p>视图容器：</p><p>​1-1  view</p><p>​视图区域</p><p>​类似div 块级元素</p><p>​               常用实现页面的组件</p><p>​       1-2  scroll - view</p><p>​可滚动的视图区域</p><p>​常用的实现滚动列表效果</p><p>​       1-3 swiper   和    swiper-item</p><p>​            轮播图容器组件和轮播图item</p><p>​</p><p>​</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 读书 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 读书有感 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>微信小程序二全</title>
       <link href="/posts/2edbc030.html"/>
       <url>/posts/2edbc030.html</url>
@@ -970,6 +945,31 @@
       <url>/posts/63c56362.html</url>
       
         <content type="html"><![CDATA[<h1>微信小程序三</h1><p>AppId ：wxac99ab16921ddf0c</p><h2 id="四">四</h2><p>页面导航</p><p>页面相互跳转</p><p>1-1   标签式的跳转 （声明式）</p><p>​，<navigator>   组件</p><p>​     2个属性    url</p><p>​   open-type</p><p>1-2  编程式的跳转</p><p>1-3  页面参数的传递</p><h2 id="七">七</h2><p>生命周期： 创建到消亡过程</p><p>小程序从启动到销毁的整个过程</p><p>小程序  ：  页面 + 组件</p><p>应用生命周期、页面生命周期、组件的生命周期</p><p>生命周期函数 ： 按照顺序依次自动加载触发调用，自带的不需要开发人员主动书写</p><p>1-1   应用生命周期</p><p>​        小程序从打开到关闭</p><p>​       应用生命周期的函数 ：</p><p>​全局变量 App() 对象方法中去定义，app.js 文件中</p><p>​    必须要在App.js 中进行调用，主动注册小程序</p><p>​    onLaunch  /    onShow     /    onHide</p><p>​</p><p>onLaunch  &gt;  onShow  &gt; onHide</p><p>1-2  页面生命周期</p><p>​</p><p>​     Page()   方法中去定义</p><p>​     访问页面  ：   onLoad     监听加载     -----    onShow  监听显示    ------   onReady    监听渲染完成</p><h2 id="八">八</h2><p>一、下拉刷新</p><p>重新加载数据</p><ol><li><p>全局开启下拉</p><p>​app.json  中window 节点  enablePullDownRefresh  true</p></li><li><p>局部开启下拉</p></li></ol><p>​           页面  .json    enablePullDownRefresh  开启</p><p>二、上拉触底</p><p>分页操作（加载更多的数据）</p><p>页面  .json  设置方法onReachBottom（）</p><p>​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 读书有感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微信小程序一全</title>
+      <link href="/posts/1ecd2ce8.html"/>
+      <url>/posts/1ecd2ce8.html</url>
+      
+        <content type="html"><![CDATA[<h1>微信小程序</h1><p>【微信官方公众平台】官网地址：<a href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/</a></p><h2 id="二">二</h2><p>基于微信生态圈的程序</p><ol><li>微信小程序与普通网页开发的区别</li></ol><p>1-1 运行环境的不同</p><p>​ 网页 ： 基于浏览器</p><p>​             微信小程序 ： 微信</p><p>1-2  API 不同</p><p>​            网页： 基于DOM 对象，BOM 的API</p><p>​            微信小程序：  自带的地理定位、支付 、 扫码</p><p>1-3 开发环境的不同</p><p>​           网页 ： 浏览器  +   代码编辑器</p><p>​           微信小程序 ：  1.申请小程序的开发账号</p><p>​                                     2.安装微信开发者工具</p><p>​                                     3.创建和配置小程序项目</p><p>小程序的官方接口：</p><p><img src="D:.Project_CJYX_%E8%AF%BE%E7%A8%8B%5C50-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5%5C02-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%5C22%E8%BD%AF%E4%BB%B6%E4%B8%80%E4%BA%8C%5C%E7%AC%AC15%E5%91%A8%5Clesson02%5C%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%8E%A5%E5%8F%A3.png" alt="微信小程序二维码接口"></p><p>【微信官方公众平台】 ： 官网地址 ： <a href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/</a></p><ol><li>填写账号信息</li><li>邮箱激活</li><li>连接激活</li></ol><p>​    主体    【个人】   区分 【企业】  -       【个人】  – 不支持微信支付、微信认证、高级接口</p><h2 id="三">三</h2><ol><li><p>获取小程序的APPID</p></li><li><p>安装开发者工具</p></li></ol><p>下载地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p><p>2-1 快速构建</p><p>2-2 代码查看编辑</p><p>2-3 代码调试与发布</p><h2 id="四">四</h2><h4 id="一-项目结构">一.项目结构</h4><ol><li><p>pages: 用来存放所有小程序的页面</p></li><li><p>utils: 用来存放工具性质的模块  （formattime）</p></li><li><p>app.js : 小程序项目入口文件</p></li><li><p>app.json : 全局配置文件</p></li><li><p>app.wxss: 全局样式文件</p></li><li><p>project.config.json: 项目配置文件</p></li><li><p>sitemap.json : 用来配置小程序是否被其它小程序索引</p></li></ol><h4 id="二、小程序组成部分">二、小程序组成部分</h4><p>单独文件夹存放、建议全部放在【page】文件夹下面</p><p>4部分组成：</p><ol><li>js脚本 : 存放数据、事件处理函数</li><li>json :  页面配置文件</li><li>.wxml : 页面排版</li><li>wxss : 页面样式文件</li></ol><h4 id="三、JSON-配置文件的作用">三、JSON 配置文件的作用</h4><p>所有的小程序都是以这种配置文件形式出现，通过这种JSON格式给小程序进行不同级别的配置</p><p>4种</p><p>app.json ,   project.config.json  ,sitemap.json</p><p>每个页面自己的.json 配置文件</p><p>app.json  ，全局变量，包括所有小程序页面路径、窗口外观、界面表现、底部tab等</p><ol><li><p>pages : 当前小程序所有页面路径</p></li><li><p>window:  定义所有的背景色、文字颜色等</p></li><li><p>style ： 样式版本</p></li><li><p>sitemapLocation ： 指明 sitemap.json 路径</p></li></ol><p>project.config.json</p><ol><li><p>settting : 保存编译相关的配置</p></li><li><p>appid： 更新</p></li></ol><p>sitemap.json</p><p>通过防爬虫机制</p><p>页面.json</p><p>本生支持的配置文件</p><h2 id="七">七</h2><h4 id="一，新增小程序页面">一，新增小程序页面</h4><p>只需要在app.json 下面  — pages ： 新增页面的路径，开发工具会根据路径自动生成相应的文件夹</p><h4 id="二、自定义首页">二、自定义首页</h4><p>调整app.json   pages  属性数组的页面路径顺序即可，首页默认为第一加载的路径，编译后进行渲染</p><h4 id="三、什么是WXML">三、什么是WXML</h4><p>weixin  Markup  language 一套自定义的微信标签，用来构建小程序页面的结构</p><p>WXML 和 HTML 区别</p><p>WXML</p><ol><li>标签名不同</li></ol><p>​HTML   (div  ，  span  ， img  , a)</p><p>​     WXML    (view , text ,  image , navigator )</p><ol start="2"><li>属性节点的不同</li></ol><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&lt;a href<span class="operator">=</span><span class="string">&quot;#&quot;</span> &gt;。。。</span><br><span class="line"></span><br><span class="line">​&lt;navigator  url<span class="operator">=</span><span class="string">&quot;/pages/index/index&quot;</span> &gt;</span><br></pre></td></tr></table></figure><ol start="3"><li>提供了类似VUE 中的模版语法</li></ol><p>​3-1 数据绑定</p><p>​            3-2  列表渲染</p><p>​            3-3 条件渲染</p><p>WXSS 微信小程序自带的样式语言</p><p>WXSS 与CSS 的区别</p><ol><li><p>新增了rpx 尺寸单位</p><p>​CSS 需要手动进行像素单位换算   rem</p><p>​        WSXX  不同屏幕小程序会自动进行换算</p></li><li><p>提供全局样式和局部样式</p></li><li><p>WXSS 里面的选择器</p></li></ol><p>​      只针对特别的选择器</p><p>​     .class   和  id</p><p>​    element 元素</p><p>​    :: after   和  ::before 伪类选择器</p><p>小程序中js 文件的分类</p><p>1-1 app.js</p><p>​整个入口文件，通过调用App函数来启动整个小程序</p><p>1-2 页面的.js 文件</p><p>​页面入口文件，通过Page函数来创建运行页面</p><p>1-3  普通的.js 文件</p><p>​就是普通的功能模块的文件，封装公共的函数或者属性供页面来调用</p><h3 id="六、宿主环境-（就近原则）">六、宿主环境 （就近原则）</h3><p>每一个程序运行的时候，需要依赖一个环境</p><p>没有宿主环境就跑步起来</p><p>微信小程序必须依赖微信</p><p>比H5多的功能</p><p>微信扫码、微信的支付、微信登录、地理定位</p><p>通信的主题：</p><ol><li>渲染层：</li></ol><p>​WXML 和 WXSS 就是我们的渲染层</p><ol start="2"><li>逻辑层：</li></ol><p>​js 脚本 工作在逻辑层的</p><h3 id="七、通信模型">七、通信模型</h3><p>与第三方交互的模式</p><h3 id="八、小程序启动的过程">八、小程序启动的过程</h3><ol><li><p>下载对应的小程序包</p></li><li><p>通过app.json全局配置文件解析项目</p></li><li><p>执行我们全局变量app.js 入口文件，调用APP（）创建小程序的实例</p></li><li><p>渲染小程序的首页</p></li><li><p>页面渲染完成</p></li></ol><h2 id="八">八</h2><h3 id="一、小程序组件的分类">一、小程序组件的分类</h3><p>视图容器：</p><p>​1-1  view</p><p>​视图区域</p><p>​类似div 块级元素</p><p>​               常用实现页面的组件</p><p>​       1-2  scroll - view</p><p>​可滚动的视图区域</p><p>​常用的实现滚动列表效果</p><p>​       1-3 swiper   和    swiper-item</p><p>​            轮播图容器组件和轮播图item</p><p>​</p><p>​</p>]]></content>
       
       
       <categories>
