@@ -1,0 +1,22 @@
+.collect2 .website-collect {
+    h4 {
+        margin-top: 0;
+    }
+
+    ul {
+        padding-left: 25px;
+
+        li {
+            span {
+                margin-left: 5px;
+            }
+
+            img {
+                display: inline-block !important;
+                vertical-align: text-bottom;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

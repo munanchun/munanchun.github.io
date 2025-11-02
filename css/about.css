@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "iconfont";
+    /* Project id 4092704 */
+    /* Color fonts */
+    src:
+        url('//at.alicdn.com/t/c/font_4092704_l22qnk6x7q9.woff2?t=1688346890092') format('woff2'),
+        url('//at.alicdn.com/t/c/font_4092704_l22qnk6x7q9.woff?t=1688346890092') format('woff'),
+        url('//at.alicdn.com/t/c/font_4092704_l22qnk6x7q9.ttf?t=1688346890092') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-duigou1:before {
+    content: "\e744";
+}
+
+.icon-cuowu:before {
+    content: "\e65b";
+}
+
+
+.about-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .about_me {
+        display: flex;
+        align-items: center;
+
+        .darling_ico {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+    }
+
+    .darling_png {
+        display: inline-block;
+        width: 180px;
+        margin-right: 10px;
+    }
+
+    div img {
+        border-radius: 0 !important;
+        border: 0px !important;
+    }
+}
+
+.iconfont {
+    margin: 0 5px;
+}
+
+
+div#page {
+    background: rgba(253, 253, 253, 0.5);
+    padding-top: 10px !important;
+}
+
+.about_page {
+    background: rgba(253, 253, 253, 1);
+
+    p {
+        margin: 0 20px 16px !important;
+    }
+}
+
+#page .about_page.benediction {
+    display: flex;
+}
+
+.about_page.benediction {
+    #benediction-left {
+        width: 70%;
+
+        p:nth-child(1) {
+            margin: 0 20px;
+        }
+
+        p:nth-child(2) {
+            margin: 15px 20px;
+        }
+
+        p:nth-child(1)::first-letter {
+            font-size: 200%;
+        }
+    }
+
+    #benediction-right {
+        width: 30%;
+        margin-left: 50px;
+        display: flex;
+
+        img {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            z-index: 10;
+        }
+
+        span {
+            width: 130px;
+            height: 45px;
+            margin-top: 34px;
+            font-size: 25px;
+            opacity: 0;
+            transform: translate(-132px, 0px);
+            transition: all 1.0s;
+            transition-timing-function: cubic-bezier(0.56, 1.35, 0.52, 1.00);
+            /* 加入回弹动画 */
+        }
+    }
+
+    div p {
+        font-size: 20px;
+    }
+}
+
+/* 慕楠椿图片动画 */
+.benediction #benediction-right img {
+    transition: all 1.0s;
+    transition-timing-function: cubic-bezier(0.56, 1.35, 0.52, 1.00);
+}
+
+.benediction #benediction-right>div:hover img {
+    text-decoration: none;
+    color: #fefefe;
+    background: var(--text-bg-hover);
+    transition: all 0.3s ease-in-out;
+    padding: 4px;
+}
+
+.benediction #benediction-right>div:hover+span {
+    opacity: 1;
+    transform: translate(46px, 18px);
+}
+
+
+@media screen and (max-width: 1300px) {
+    .benediction #benediction-right>div:hover+span {
+        opacity: 1;
+        transform: translate(-30px, 136px);
+    }
+
+    .benediction #benediction-right span {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #page .about_page.benediction {
+        flex-direction: column;
+    }
+
+    .about_page.benediction #benediction-left {
+        width: 100%;
+    }
+
+    .about_page.benediction #benediction-right {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .benediction #benediction-right>div:hover+span {
+        opacity: 1;
+        transform: translate(50px, 16px);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .benediction #benediction-right>div:hover+span {
+        opacity: 1;
+        transform: translate(5px, 16px);
+    }
+}

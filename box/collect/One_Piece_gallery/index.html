@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海贼王通缉令相册</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 100vh;
+            background-color: rgb(175, 146, 99);
+        }
+
+        #scene {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .layer {
+            position: absolute !important;
+        }
+
+        .col {
+            pointer-events: all;
+            width: 212.5px;
+            height: 297.5px;
+
+            a {
+                display: inline-block;
+                position: relative;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .col {
+                width: 127.5px;
+                height: 178.5px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body>
+    <section id="scene" data-scalar-y="200.0" data-scalar-x="75.0"></section>
+    <!-- 导入插件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/parallax.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        let imgList = [
+            '德岛篇-青椒',
+            '德岛篇-雷欧',
+            '德岛篇-曼雪莉',
+            '德岛篇-蕾贝卡',
+            '德岛篇-居鲁士',
+            '德岛篇-维奥莱特',
+            '东海篇&阿拉巴斯坦-奈菲特·D·薇薇',
+            '东海篇&阿拉巴斯坦-玛琪诺',
+            '东海篇&阿拉巴斯坦-卡利·达旦',
+            '东海篇&阿拉巴斯坦-Mr2冯•克雷',
+            '东海篇&阿拉巴斯坦-亚尔丽塔',
+            '东海篇&阿拉巴斯坦-克利克',
+            '东海篇&阿拉巴斯坦-西格',
+            '东海篇&阿拉巴斯坦-阿龙',
+            '巴基',//
+            'BIG MOM海贼团-夏洛特·大福',
+            'BIG MOM海贼团-波斌',
+            'BIG MOM海贼团-夏洛特·斯慕吉',
+            'BIG MOM海贼团-波克慕斯',
+            'BIG MOM海贼团-夏洛特·克力架',
+            'BIG MOM海贼团-夏洛特·佩罗斯佩洛',
+            'BIG MOM海贼团-夏洛特·卡塔库栗',
+            'BIG MOM海贼团-夏洛特·玲玲',
+            'BIG MOM海贼团-蛋蛋男爵',
+            'BIG MOM海贼团-夏洛特·布琳',
+            '文斯莫克·伽治',
+            '文斯莫克·蕾玖',
+            '文斯莫克·伊治',
+            '文斯莫克·尼治',
+            '文斯莫克·勇治',//
+            '唐吉诃德家族-琵卡',
+            '唐吉诃德家族-砂糖',
+            '唐吉诃德家族-维尔戈',
+            '唐吉诃德家族-莫奈',
+            '唐吉诃德家族-托雷波尔',
+            '唐吉诃德家族-迪亚曼蒂',
+            '唐吉诃德家族-凯撒·库朗',
+            '新老七武海-唐吉柯德·多弗朗明戈',
+            '唐吉诃德家族-唐吉诃德·罗西南迪',
+            '乔拉可尔·米霍克',
+            '佩罗娜',
+            '世界政府-罗布·路奇',
+            '世界政府-卡莉法',
+            '柯妮丝',
+            '白星',//
+            '新老七武海-爱德华·威布尔',
+            '新老七武海-巴基',
+            '新老七武海-月光·莫利亚',
+            '新老七武海-乔拉可尔·米霍克',
+            '新老七武海-巴索罗缪·大熊',
+            '新老七武海-特拉法尔加·D·瓦铁尔·罗',
+            '新老七武海-波雅·汉库克',
+            '新老七武海-沙·克洛克达尔',
+            '沙·克洛克达尔',
+            '毛茸茸公国-犬岚',
+            '毛茸茸公国-猫蝮蛇',
+            '毛茸茸公国-佩德洛',
+            '毛茸茸公国-加洛特',
+            '毛茸茸公国-贝波',
+            '毛茸茸公国-西西里安',//
+            '和之国篇-光月桃之助',
+            '和之国篇-光月日和',
+            '和之国篇-锦卫门',
+            '新草帽团-布鲁克',
+            '新草帽团-乔巴',
+            '新草帽团-娜美',
+            '新草帽团-山治',
+            '新草帽团-路飞',
+            '新草帽团-索隆',
+            '新草帽团-乌索普',
+            '新草帽团-罗宾',
+            '新草帽团-弗兰奇',
+            '新草帽团-甚平',
+            '和之国篇后-罗',
+            '和之国篇后-基德',//
+            '和之国篇-菊之丞',
+            '和之国篇-雷藏',
+            '和之国篇-霜月龙马',
+            '和之国篇后-布鲁克',
+            '和之国篇后-乔巴',
+            '和之国篇后-娜美',
+            '和之国篇后-山治',
+            '和之国篇后-路飞',
+            '和之国篇后-索隆',
+            '和之国篇后-乌索普',
+            '和之国篇后-罗宾',
+            '和之国篇后-弗兰奇',
+            '和之国篇后-甚平',
+            '超新星-基拉',
+            '超新星-基德',//
+            '和之国篇-黑炭大蛇',
+            '白胡子海贼团-以藏',
+            '白胡子海贼团-乔兹',
+            '老草帽团-布鲁克',
+            '老草帽团-乔巴',
+            '老草帽团-娜美',
+            '老草帽团-山治',
+            '老草帽团-路飞',
+            '老草帽团-索隆',
+            '老草帽团-乌索普',
+            '老草帽团-罗宾',
+            '老草帽团-弗兰奇',
+            '海军-斯摩格',
+            '海军-达斯琪',
+            '海军-麦哲伦',//
+            '白胡子海贼团-奥兹',
+            '白胡子海贼团-比斯塔',
+            '白胡子海贼团-那谬尔',
+            '白胡子海贼团-马尔科',
+            '白胡子海贼团-萨奇',
+            '白胡子海贼团-艾斯',
+            '白胡子海贼团-白胡子',
+            '海军-蒙奇·D·卡普',
+            '海军-战国',
+            '海军-萨卡斯基',
+            '海军-波鲁萨利诺',
+            '海军-一生',
+            '海军-克比',
+            '海军-泽法',
+            '海军-艾恩',//
+            '革命军-乌鸦',
+            '革命军-贝洛·贝蒂',
+            '革命军-林德伯格',
+            '革命军-莫里',
+            '革命军-安布里奥·伊万科夫',
+            '革命军-克尔拉',
+            '革命军-萨博',
+            '革命军-蒙奇·D·龙',
+            '黑胡子海贼团-马歇尔·D·蒂奇',
+            '黑胡子海贼团-希留',
+            '黑胡子海贼团-吉扎斯·巴杰斯',
+            '黑胡子海贼团-拉斐特',
+            '黑胡子海贼团-毒Q',
+            '黑胡子海贼团-卡特琳·蝶美',
+            '海军-库赞',//
+            '百兽海贼团-佩吉万',
+            '百兽海贼团-奎因',
+            '百兽海贼团-杰克',
+            '百兽海贼团-烬',
+            '百兽海贼团-凯多',
+            '红发海贼团-本·贝克曼',
+            '红发海贼团-拉奇·鲁',
+            '红发海贼团-香克斯',
+            '红发海贼团-耶稣布',
+            '红发海贼团-洛克斯达',
+            '艾尼路',
+            '黑胡子海贼团-圣胡安·恶狼',
+            '黑胡子海贼团-巴斯克·乔特',
+            '黑胡子海贼团-范·奥卡',
+            '黑胡子海贼团-阿瓦罗·匹萨罗',//
+            '超新星-X·德雷克',
+            '超新星-乌尔基',
+            '超新星-乔艾莉·波妮',
+            '超新星-卡彭•贝基',
+            '超新星-卡里布',
+            '罗杰海贼团-巴基',
+            '罗杰海贼团-香克斯',
+            '罗杰海贼团-哥尔·D·罗杰',
+            '罗杰海贼团-西尔巴兹·雷利',
+            '罗杰海贼团-克罗卡斯',
+            '超新星-巴托洛米奥',
+            '超新星-海鸣阿普',
+            '超新星-巴兹尔·霍金斯',
+            '超新星-白马·卡文迪什',
+            '超新星-贝拉米',
+        ]
+
+        // 创建一个字符串来保存所有图片的HTML结构
+        let html = '';
+        // 定义每行每列的盒子数量
+        const rows = 11;
+        const cols = 15;
+
+        let boxWidth, boxHeight, gap;
+        // 检查设备类型，如果是手机端则使用手机端的宽度和高度，否则使用默认的宽度和高度
+        if (window.innerWidth < 600) {
+            // 在手机端的宽度和高度
+            boxWidth = 127.5;
+            boxHeight = 178.5;
+            gap = -20;
+        } else {
+            // 默认的宽度和高度
+            boxWidth = 212.5;
+            boxHeight = 297.5;
+            gap = -40;
+        }
+
+        // 计算内容整体居中的偏移量
+        const containerWidth = cols * (boxWidth + gap) - gap; // 计算容器宽度
+        const containerHeight = rows * (boxHeight + gap) - gap; // 计算容器高度
+        const offsetLeft = (containerWidth - scene.offsetWidth) / 2; // 计算水平偏移量
+        const offsetTop = (containerHeight - scene.offsetHeight) / 2; // 计算垂直偏移量
+
+        // 初始化位置变量
+        let Left = -offsetLeft;
+        let Top = -offsetTop;
+        // 循环生成HTML结构
+        imgList.forEach((imgName, index) => {
+            const randomRotation = Math.floor(Math.random() * 61) - 30;
+            const currentLeft = Left + (index % cols) * (boxWidth + gap);
+            const currentTop = Top + Math.floor(index / cols) * (boxHeight + gap);
+            // 随机生成 z-index
+            const zIndex = imgName === "和之国篇后-路飞" ? 15 : Math.floor(Math.random() * 10);
+            // 生成图片的HTML结构，并添加到html字符串中
+            html += `
+            <div class="layer"  id="layer-${index}" data-depth="1" style="z-index: ${zIndex};" >
+                <div class="col" style="transform: rotate(${randomRotation}deg);">
+                    <a href="./img/${imgName}.webp" data-fancybox="gallery" data-caption="${imgName}" style="width:100%;height:100%;">
+                        <img class="lazyload" data-src="./img/${imgName}.webp" alt="${imgName}" style="width:100%;height:100%;object-fit: cover;border: 2px solid #333;box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);" />
+                    </a>
+                </div>
+            </div>
+            `;
+        });
+        // 将生成的HTML结构插入到scene中 
+        scene.innerHTML += html;
+
+        let parallax = new Parallax(scene);
+
+        // 在 Parallax.js 初始化之后再次设置样式
+        imgList.forEach((imgName, index) => {
+            const currentLeft = Left + (index % cols) * (boxWidth + gap);
+            const currentTop = Top + Math.floor(index / cols) * (boxHeight + gap);
+            const layer = document.getElementById(`layer-${index}`);
+            layer.style.top = `${currentTop}px`;
+            layer.style.left = `${currentLeft}px`;
+        });
+
+        //----------图片懒加载----------
+        const lazyImages = Array.from(document.querySelectorAll('img.lazyload'));
+
+        // 创建 Intersection Observer 实例
+        const lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting > 0) {
+                    var lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src; // 将 data-src 中的路径赋值给 src
+                    lazyImage.classList.remove("lazyload"); // 移除 lazyload 类
+                    lazyImageObserver.unobserve(lazyImage); // 停止观察该图片
+                }
+            });
+        }, {
+            rootMargin: '100px'
+        });
+
+        // 对所有带有 lazyload 类的图片元素进行观察
+        lazyImages.forEach(function (lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+
+        //配置查看缩略图
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: false,
+            Images: {
+                initialSize: "fit",
+            }
+        });
+        console.log('这套图片是站长花14大洋从pdd买的(小贵doge😣)，原图一共165张1.7G，站长压缩到6MB(看着可能有点糊)')
+        console.log('需要原图的可以联系站长(free)，在主页加站长联系方式')
+    </script>
+</body>
+
+</html>
