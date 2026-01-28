@@ -2380,10 +2380,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/default-bg.jpg);
-    --darkmode-bg:url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/darkmode-bg.webp);
-    --mobileday-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/mobileday-bg.jpg);
-    --mobilenight-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/bg/mobilenight-bg.jpg);
+    --default-bg: url(https://tuchuang.voooe.cn/images/2026/01/28/jnoj.webp);
+    --darkmode-bg:url(https://tuchuang.voooe.cn/images/2026/01/28/darkmode-bg.webp);
+    --mobileday-bg: url(https://tuchuang.voooe.cn/images/2025/11/27/bg1.jpg);
+    --mobilenight-bg: url(https://tuchuang.voooe.cn/images/2025/11/27/bg1.jpg);
   }`;
 }
 
